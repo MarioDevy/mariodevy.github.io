@@ -1,0 +1,231 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MárioDev - Desenvolvedor Freelancer</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #121212;
+      color: #f0f0f0;
+      scroll-behavior: smooth;
+    }
+    /* Menu fixo */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #1e1e1e;
+      padding: 10px 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.7);
+      z-index: 1000;
+    }
+    nav ul {
+      margin: 0;
+      padding: 0 20px;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+    nav ul li a {
+      color: #f0f0f0;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover {
+      color: #90caf9;
+    }
+
+    header {
+      background: #1e1e1e;
+      color: #ffffff;
+      padding: 100px 20px 40px; /* mais padding top para compensar o menu fixo */
+      text-align: center;
+      margin-top: 50px; /* espaço para menu fixo */
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    main {
+      max-width: 800px;
+      margin: 40px auto 80px; /* margem inferior para footer fixo */
+      padding: 0 20px;
+    }
+    section {
+      background: #1e1e1e;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(255,255,255,0.05);
+      margin-bottom: 30px;
+
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    section h2 {
+      color: #ffffff;
+      font-size: 1.8rem;
+      margin-top: 0;
+    }
+    section p, ul {
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    a.whatsapp-button {
+      background-color: #25D366;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 10px;
+      transition: background-color 0.3s ease;
+    }
+    a.whatsapp-button:hover {
+      background-color: #1ebe57;
+    }
+    footer {
+      background: #1e1e1e;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+
+    /* Responsividade */
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        gap: 15px;
+        padding: 10px 0;
+      }
+      nav ul li a {
+        font-size: 1.2rem;
+      }
+      header {
+        padding: 120px 15px 30px;
+      }
+      main {
+        margin: 20px auto 100px;
+        padding: 0 15px;
+      }
+      section {
+        padding: 20px;
+      }
+      section h2 {
+        font-size: 1.5rem;
+      }
+      section p, ul {
+        font-size: 1rem;
+      }
+      a.whatsapp-button {
+        padding: 12px 24px;
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="#sobre">Sobre Mim</a></li>
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>MárioDev</h1>
+    <p>Transformando ideias em código</p>
+  </header>
+
+  <main>
+    <section id="sobre">
+      <h2>Sobre Mim</h2>
+      <p>
+        Olá! Sou <strong>MárioDev</strong>, um desenvolvedor freelancer apaixonado por tecnologia e por transformar ideias em realidade digital. Mesmo sendo iniciante, coloco energia, dedicação e criatividade em cada linha de código. Estou sempre aprendendo, evoluindo e buscando entregar soluções inteligentes, com foco na simplicidade e eficiência.
+      </p>
+      <p>
+        Se você procura alguém comprometido, com sede de aprendizado e vontade de fazer a diferença, você encontrou. Vamos juntos tirar seu projeto do papel?
+      </p>
+      <p>
+        Hi! I'm <strong>MárioDev</strong>, a freelance developer passionate about bringing ideas to life through clean, functional, and creative code. As a beginner, I approach every project with dedication, curiosity, and a strong will to grow. I believe every line of code is a step toward excellence.
+      </p>
+      <p>
+        If you're looking for someone motivated, detail-oriented, and ready to take on challenges — let's build something great together!
+      </p>
+    </section>
+
+    <section id="servicos">
+      <h2>Serviços</h2>
+      <ul>
+        <li>Criação de sites simples e completos</li>
+        <li>Correção de códigos</li>
+      </ul>
+    </section>
+
+    <section id="contato">
+      <h2>Contato</h2>
+      <p>Email: <a href="mailto:mariiofreelancer@gmail.com" style="color: #90caf9;">mariiofreelancer@gmail.com</a></p>
+      <p>WhatsApp:</p>
+      <a class="whatsapp-button" href="#" onclick="contatarWhatsApp(event)">Fale comigo no WhatsApp</a>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 MárioDev - Todos os direitos reservados
+  </footer>
+
+  <script>
+    // Animação fade-in nas seções ao scroll
+    const sections = document.querySelectorAll('section');
+
+    function checkSections() {
+      const triggerBottom = window.innerHeight * 0.85;
+
+      sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+
+        if(sectionTop < triggerBottom) {
+          section.classList.add('visible');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', checkSections);
+    window.addEventListener('load', checkSections);
+
+    // Função para mensagem e redirecionar WhatsApp
+    function contatarWhatsApp(event) {
+      event.preventDefault();
+      const mensagem = "Oi! Vi seu site e quero um orçamento para criação de site.";
+      const confirmar = confirm(mensagem + "\n\nClique OK para abrir o WhatsApp.");
+      if (confirmar) {
+        const numero = "5591998384328";
+        const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+        window.open(url, "_blank");
+      }
+    }
+  </script>
+
+</body>
+</html>
